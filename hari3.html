@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+      
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #333;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.product {
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.product-image img {
+    max-width: 300px;
+    border-right: 1px solid #f4f4f4;
+}
+
+.product-details {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 1.6rem;
+    color: #e63946;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    background: #e63946;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background: #d62828;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">ShopEasy</div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="product">
+            <div class="product-image">
+                <img src="data:image/jpeg;base64,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" alt="Product Name">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">iphone</h1>
+                <p class="product-description">This is a short description of the product, highlighting its features and benefits.</p>
+                <p class="product-price">$49.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 ShopEasy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
